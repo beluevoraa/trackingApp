@@ -51,7 +51,28 @@ header img {
     font-family: hello;
     font-weight: lighter;
     animation: fadeIn 1s ease-out;
+    text-align: center;
 }
+
+@media (max-width: 1100px) {
+    .main-title h1{
+        font-size: 3rem;
+    }
+
+    .subtitle{
+        font-size: 2.2rem !important;
+        margin-top: -100px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title h1{
+        font-size: 2.6rem !important;
+         white-space: nowrap;
+       }
+}
+
 
  h2 {
     padding: 50px 20px;
@@ -70,11 +91,6 @@ header img {
     text-decoration: none;
  }
 
-@media (max-width: 1100px) {
-    .main-title h1, .main-title h2{
-        font-size: 3.9rem;
-    }
-}
 
 /* NAV */
 .floating-nav {
@@ -83,11 +99,9 @@ header img {
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--lila);
-    padding: 20px 20px;
+    padding: 15px;
     border-radius: 20px;
     box-shadow: var(--nav-shadow);
-    display: flex;
-    justify-content: center;
     z-index: 1;
 }
 
@@ -105,7 +119,7 @@ header img {
 
 .floating-nav a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--main-bg);
     transition: color 0.3s;
     font-size: 1.3rem;
@@ -114,6 +128,23 @@ header img {
 
 .floating-nav a:hover {
     color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+    .floating-nav {
+        width: 90%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .floating-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .floating-nav a {
+        font-size: 1rem;
+    }
 }
 
 .image-container {
@@ -130,6 +161,8 @@ header img {
     top: 390px; 
  }
 
+ /* Hábitos */
+
  .habits {
     text-align: center;
     margin-top: 0px;
@@ -141,6 +174,13 @@ header img {
     max-width: 900px;
     margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    .habit-grid {
+        grid-template-columns: repeat(1, 1fr); /* Se pone en una sola columna en móviles */
+    }
+}
+
  
 .habit {
     background-color: var(--rosa);
@@ -175,6 +215,13 @@ header img {
     gap: 10px;
     justify-content: center;
 }
+
+@media (max-width: 480px) {
+    .circle-container {
+        grid-template-columns: repeat(3, 1fr); /* Se adapta en móviles */
+    }
+}
+
 
 .circle-container input {
     display: none;
@@ -231,6 +278,15 @@ header img {
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .back-button {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+}
+
 /* metas */
 .goals {
     text-align: center;
@@ -273,6 +329,12 @@ header img {
     transition: all 0.3s ease;
 }
 
+
+@media (max-width: 768px) {
+    .goal {
+        width: 90%;
+    }
+}
 .goal h3 {
     font-size: 1.3rem;
     color: var(--text-color);
@@ -328,3 +390,74 @@ header img {
 .complete-btn {
     color: green;
 }
+
+/* gratitud */
+.gratitude-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--rosa);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--nav-shadow);
+}
+
+@media (max-width: 768px) {
+    #gratitude-container {
+        width: 90%;
+    }
+}
+
+.gratitude-entry label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+    .accept-btn {
+        font-size: 0.8rem;
+        padding: 4px 6px;
+    }
+}
+
+.gratitude-entry input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.gratitude-entry input.saved {
+    background-color: #fdf6ec; /* Beige clarito */
+}
+
+.accept-btn {
+    background-color: var(--highlight-color);
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--nav-shadow);
+}
+
+
+.accept-btn:hover {
+    background-color: var(--rosa);
+    transform: scale(1.1);
+}
+
+.accept-btn.saved {
+    background-color: var(--green);
+    transform: scale(1.2);
+}
+
+ 
