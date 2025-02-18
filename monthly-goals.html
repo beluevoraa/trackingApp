@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -17,9 +19,17 @@
         <i class="fas fa-arrow-left"></i> Volver
     </a>
 
+    <button id="dark-mode-toggle">🌗 Modo Oscuro</button>
+
+
     <section class="main-title">
         <h1>Monthly Goals</h1>
     </section>
+
+    <div id="motivacion-container">
+        <div id="motivacion" class="motivacion">Frase motivadora aquí</div>
+        <p id="refresh-message">Refrescá la página para ver una nueva frase ✨</p>
+    </div>
 
     <section class="goals">
          
@@ -35,8 +45,9 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="monthly-goals.js"></script>
+    <script src="darkmode.js"></script>
 
 
 </body>

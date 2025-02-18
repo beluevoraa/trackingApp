@@ -100,3 +100,30 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cargar las metas cuando se abre la página
     cargarMetas();
 });
+
+function lanzarConfeti() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+}
+
+// Llamá esta función cuando el usuario marque una meta como completa
+document.querySelectorAll(".complete-btn").forEach((btn) => {
+    btn.addEventListener("click", lanzarConfeti);
+});
+
+
+const frasesMotivadoras = [
+    "🌟 ¡Nunca te rindas! Grandes cosas toman tiempo.",
+    "💪 Hoy es un gran día para alcanzar tus metas.",
+    "✨ Cree en ti misma. ¡Podés con todo!",
+    "🚀 ¡Un paso a la vez hacia tus sueños!",
+    "🌸 Las pequeñas acciones diarias crean grandes cambios."
+];
+
+window.addEventListener("DOMContentLoaded", function () {
+    const fraseRandom = frasesMotivadoras[Math.floor(Math.random() * frasesMotivadoras.length)];
+    document.querySelector("#motivacion").textContent = fraseRandom;
+});

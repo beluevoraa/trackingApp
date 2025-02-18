@@ -58,3 +58,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Generar la lista de gratitud
     crearListaDeGratitud();
 });
+
+

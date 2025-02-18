@@ -28,3 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cargar hábitos guardados al abrir la página
     cargarHabitos();
 });
+
